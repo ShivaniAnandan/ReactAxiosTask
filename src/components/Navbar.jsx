@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <a className="navbar-brand" href="#">Axios CURD</a>
+        <a className="navbar-brand" href="#">Axios CRUD</a>
 
         <div className=" navbar-collapse justify-content-evenly" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
