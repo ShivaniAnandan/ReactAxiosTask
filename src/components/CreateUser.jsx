@@ -1,14 +1,14 @@
-import React, { useState } from 'react'; 
+import React, { useContext, useState } from 'react'; 
 import { useNavigate } from 'react-router-dom'; 
-import { useUserContext } from './UserContext'; // Import custom hook to use the user context
 import { v4 as uuidv4 } from 'uuid'; // Import uuidv4 for generating unique IDs
+import { UserContext } from '../App';
 
 
 const CreateUser = () => {
   
   const [user, setUser] = useState({ name: '', email: '', phone: '' });
   // Access addUser function from UserContext to add a new user
-  const { addUser } = useUserContext();
+  const { addUser } = useContext(UserContext);
   
   const navigate = useNavigate();
 

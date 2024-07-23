@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react'; 
+import React, { useState, useEffect, useContext } from 'react'; 
 import { useNavigate, useParams } from 'react-router-dom'; 
-import { useUserContext } from './UserContext'; 
+import { UserContext } from '../App';
+
 
 
 const EditUser = () => {
   // Extract the user ID from the route parameters
   const { id } = useParams();
-  const { users, editUser } = useUserContext();
+  const { users, editUser } = useContext(UserContext);
   const [user, setUser] = useState({ name: '', email: '', phone: '' });
   const navigate = useNavigate();
 

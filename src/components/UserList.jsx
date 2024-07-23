@@ -1,11 +1,11 @@
-import React from 'react'; 
+import React, { useContext } from 'react'; 
 import { Link } from 'react-router-dom'; 
-import { useUserContext } from './UserContext'; 
+import { UserContext } from '../App';
 
 
 const UserList = () => {
   
-  const { users, deleteUser } = useUserContext();
+  const { users, deleteUser } = useContext(UserContext);
   
  
   // console.log(users);
